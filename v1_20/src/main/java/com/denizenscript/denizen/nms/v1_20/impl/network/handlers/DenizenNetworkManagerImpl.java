@@ -95,6 +95,10 @@ public class DenizenNetworkManagerImpl extends Connection {
         }
     }
 
+    public static Connection getConnection(Player player) {
+        return getConnection(((CraftPlayer) player).getHandle());
+    }
+
     public static DenizenNetworkManagerImpl getNetworkManager(ServerPlayer player) {
         return (DenizenNetworkManagerImpl) getConnection(player);
     }
